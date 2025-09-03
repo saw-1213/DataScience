@@ -1,0 +1,10 @@
+,F-statistic,p-value
+Age,0.8528,0.3558
+Blood Pressure,1.9258,0.1653
+Cholesterol Level,0.0732,0.7867
+BMI,3.8712,0.0491
+Sleep Hours,0.1454,0.703
+Triglyceride Level,0.0851,0.7706
+Fasting Blood Sugar,0.0504,0.8224
+CRP Level,0.3613,0.5478
+Homocysteine Level,0.6877,0.407

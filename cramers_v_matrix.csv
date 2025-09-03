@@ -1,0 +1,13 @@
+,Gender,Exercise Habits,Smoking,Family Heart Disease,Diabetes,High Blood Pressure,Low HDL Cholesterol,High LDL Cholesterol,Alcohol Consumption,Stress Level,Sugar Consumption,Heart Disease Status
+Gender,1.0,0.0,0.003,0.0,0.0,0.01,0.0,0.004,0.018,0.008,0.0,0.013
+Exercise Habits,0.0,1.0,0.015,0.0,0.0,0.0,0.0,0.016,0.007,0.0,0.0,0.0
+Smoking,0.003,0.015,1.0,0.0,0.008,0.015,0.008,0.002,0.0,0.0,0.0,0.0
+Family Heart Disease,0.0,0.0,0.0,1.0,0.0,0.015,0.0,0.006,0.007,0.0,0.0,0.0
+Diabetes,0.0,0.0,0.008,0.0,1.0,0.0,0.0,0.0,0.0,0.023,0.0,0.0
+High Blood Pressure,0.01,0.0,0.015,0.015,0.0,1.0,0.001,0.0,0.0,0.0,0.008,0.0
+Low HDL Cholesterol,0.0,0.0,0.008,0.0,0.0,0.001,1.0,0.0,0.0,0.0,0.0,0.0
+High LDL Cholesterol,0.004,0.016,0.002,0.006,0.0,0.0,0.0,1.0,0.026,0.014,0.0,0.0
+Alcohol Consumption,0.018,0.007,0.0,0.007,0.0,0.0,0.0,0.026,1.0,0.014,0.027,0.0
+Stress Level,0.008,0.0,0.0,0.0,0.023,0.0,0.0,0.014,0.014,1.0,0.009,0.024
+Sugar Consumption,0.0,0.0,0.0,0.0,0.0,0.008,0.0,0.0,0.027,0.009,1.0,0.0
+Heart Disease Status,0.013,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.024,0.0,1.0
