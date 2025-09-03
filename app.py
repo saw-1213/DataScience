@@ -21,7 +21,7 @@ diabetes = st.selectbox("Diabetes", ["No", "Yes"])
 bmi = st.number_input("BMI", 10.0, 50.0, 25.0, 0.1)
 hbp = st.selectbox("High Blood Pressure", ["No", "Yes"])
 triglyceride = st.number_input("Triglyceride Level", 50, 500, 150)
-fbs = st.selectbox("Fasting Blood Sugar > 120 mg/dl", ["No", "Yes"])
+fbs = st.number_input("Fasting Blood Sugar (mg/dL)", 50, 200, 100)
 crp = st.number_input("CRP Level (mg/L)", 0.0, 20.0, 1.0, 0.1)
 homocysteine = st.number_input("Homocysteine Level (µmol/L)", 0.0, 100.0, 10.0, 0.1)
 
@@ -73,7 +73,7 @@ gender_enc = label_encoders["Gender"].transform([gender])[0]
 family_hd_enc = label_encoders["Family Heart Disease"].transform([family_hd])[0]
 diabetes_enc = label_encoders["Diabetes"].transform([diabetes])[0]
 hbp_enc = label_encoders["High Blood Pressure"].transform([hbp])[0]
-fbs_enc = label_encoders["Fasting Blood Sugar"].transform([fbs])[0]
+
 
 # One-hot encode sugar/alcohol
 sugar_high = 1 if sugar=="High" else 0
@@ -97,7 +97,7 @@ input_df = pd.DataFrame({
     "BMI":[bmi],
     "High Blood Pressure":[hbp_enc],
     "Triglyceride Level":[triglyceride],
-    "Fasting Blood Sugar":[fbs_enc],
+    "Fasting Blood Sugar":[fbs],
     "CRP Level":[crp],
     "Homocysteine Level":[homocysteine],
     "Cholesterol Ratio":[chol_ratio],
@@ -111,7 +111,7 @@ input_df = pd.DataFrame({
 })
 
 # Normalize numeric columns using saved scaler
-numeric_cols = ["Age","Blood Pressure","BMI","Triglyceride Level","CRP Level","Homocysteine Level"]
+numeric_cols = ["Age","Blood Pressure","BMI","Triglyceride Level","Fasting Blood Sugar", "CRP Level","Homocysteine Level", "Lifestyle Index"]
 input_df[numeric_cols] = scaler.transform(input_df[numeric_cols])
 
 # ------------------ Prediction ------------------
