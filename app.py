@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Load trained model
-model = joblib.load("ann_model.pkl")
+model = joblib.load("model.pkl")
 
 st.set_page_config(page_title="Heart Disease Prediction", page_icon="❤️", layout="centered")
 
