@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import joblib
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler, MinMaxScaler
 
 # Load trained model
 model = joblib.load("model.pkl")
