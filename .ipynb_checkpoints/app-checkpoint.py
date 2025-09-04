@@ -1,4 +1,6 @@
 import streamlit as st
+import pandas as pd
+import joblib
 
 # Load trained model
 model = joblib.load("model.pkl")
