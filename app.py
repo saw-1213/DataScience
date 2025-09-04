@@ -111,7 +111,7 @@ input_df = pd.DataFrame({
 })
 
 # Normalize numeric columns using saved scaler
-numeric_cols = ["Age","Blood Pressure","BMI","Triglyceride Level","Fasting Blood Sugar", "CRP Level","Homocysteine Level", "Lifestyle Index"]
+numeric_cols = ["Age","Blood Pressure","BMI","Triglyceride Level","Fasting Blood Sugar", "CRP Level","Homocysteine Level"]
 input_df[numeric_cols] = scaler.transform(input_df[numeric_cols])
 
 # ------------------ Prediction ------------------
