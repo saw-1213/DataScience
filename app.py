@@ -6,7 +6,8 @@ from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler, M
 # Load trained model
 model = joblib.load("model.pkl")
 scaler = joblib.load("scaler.pkl")          
-label_encoders = joblib.load("label_encoders.pkl")  
+label_encoders = joblib.load("label_encoders.pkl")
+
 
 st.set_page_config(page_title="Heart Disease Prediction", page_icon="❤️", layout="centered")
 
@@ -114,7 +115,8 @@ input_df = pd.DataFrame({
 # Normalize numeric columns using saved scaler
 numeric_cols = ["Age","Blood Pressure","BMI","Triglyceride Level","Fasting Blood Sugar", "CRP Level","Homocysteine Level", "Lifestyle_Index"]
 input_df[numeric_cols] = scaler.transform(input_df[numeric_cols])
-print(input_df.columns.tolist())
+st.write("App input_df columns:", input_df.columns.tolist())
+
 
 # ------------------ Prediction ------------------
 if st.button("🔍 Predict"):
