@@ -114,6 +114,7 @@ input_df = pd.DataFrame({
 # Normalize numeric columns using saved scaler
 numeric_cols = ["Age","Blood Pressure","BMI","Triglyceride Level","Fasting Blood Sugar", "CRP Level","Homocysteine Level", "Lifestyle_Index"]
 input_df[numeric_cols] = scaler.transform(input_df[numeric_cols])
+print(input_df.columns.tolist())
 
 # ------------------ Prediction ------------------
 if st.button("🔍 Predict"):
