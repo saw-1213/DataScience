@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import joblib
+import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler, MinMaxScaler
 
 # Load trained model
@@ -126,3 +127,24 @@ if st.button("🔍 Predict"):
         st.error("⚠️ The model predicts: **Heart Disease Detected**")
     else:
         st.success("✅ The model predicts: **No Heart Disease**")
+
+#---------------Visualization---------------
+    avg_values = {
+        "BMI": 29,
+        "Blood Pressure": 150,
+        "Triglyceride Level": 250
+    }
+
+    user_values = {
+        "BMI": bmi,
+        "Blood Pressure": bp,
+        "Triglyceride Level": triglyceride
+    }
+
+    st.subheader("📈 Risk Factor Comparison")
+    fig, ax = plt.subplots()
+    ax.bar(avg_values.keys(), avg_values.values(), alpha=0.5, label="Average")
+    ax.bar(user_values.keys(), user_values.values(), alpha=0.7, label="You")
+    ax.set_ylabel("Value")
+    ax.legend()
+    st.pyplot(fig)
