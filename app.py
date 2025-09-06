@@ -15,6 +15,7 @@ st.title("❤️ Heart Disease Prediction App")
 st.write("Enter your health and lifestyle details to predict the risk of Heart Disease.")
 
 # ------------------ User Inputs ------------------
+st.subheader("🧍 Personal Info")
 age = st.number_input("Age", 1, 120, 40)
 gender = st.selectbox("Gender", ["Male", "Female"])
 bp = st.number_input("Blood Pressure", 80, 200, 120)
