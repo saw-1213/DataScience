@@ -18,6 +18,7 @@ st.write("Enter your health and lifestyle details to predict the risk of Heart D
 st.subheader("🧍 Personal Info")
 age = st.number_input("Age", 1, 120, 40)
 gender = st.selectbox("Gender", ["Male", "Female"])
+st.subheader("🧪 Medical Data")
 bp = st.number_input("Blood Pressure", 80, 200, 120)
 family_hd = st.selectbox("Family Heart Disease", ["No", "Yes"])
 diabetes = st.selectbox("Diabetes", ["No", "Yes"])
@@ -32,11 +33,12 @@ chol_tc = st.number_input("Total Cholesterol", 100, 400, 200)
 low_hdl = st.selectbox("Low HDL Cholesterol", ["No", "Yes"])
 high_ldl = st.selectbox("High LDL Cholesterol", ["No", "Yes"])
 
+st.subheader("🏃Daily Routine")
 sleep_hours = st.slider("Sleep Hours", 0, 12, 7)
 exercise = st.selectbox("Exercise Habits", ["Low", "Medium", "High"])
 smoking = st.selectbox("Smoking", ["No", "Yes"])
 stress = st.selectbox("Stress Level", ["Low", "Medium", "High"])
-
+st.subheader("🍬🍺Sugar&Alcohol Intake")
 sugar = st.selectbox("Sugar Consumption", ["Low", "Medium", "High"])
 alcohol = st.selectbox("Alcohol Consumption", ["Low", "Medium", "High"])
 
